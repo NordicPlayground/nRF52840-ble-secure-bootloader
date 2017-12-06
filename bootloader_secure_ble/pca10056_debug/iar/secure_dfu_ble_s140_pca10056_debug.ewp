@@ -184,7 +184,7 @@
           <state>NRF_DFU_DEBUG_VERSION</state>
           <state>NRF_DFU_SETTINGS_VERSION=1</state>
           <state>NRF_DFU_SVCI_ENABLED</state>
-          <state>NRF_SD_BLE_API_VERSION=5</state>
+          <state>NRF_SD_BLE_API_VERSION=6</state>
           <state>S140</state>
           <state>SOFTDEVICE_PRESENT</state>
           <state>SVC_INTERFACE_CALL_AS_NORMAL_FUNCTION</state>
@@ -529,7 +529,7 @@
           <state>NRF_DFU_DEBUG_VERSION</state>
           <state>NRF_DFU_SETTINGS_VERSION=1</state>
           <state>NRF_DFU_SVCI_ENABLED</state>
-          <state>NRF_SD_BLE_API_VERSION=5</state>
+          <state>NRF_SD_BLE_API_VERSION=6</state>
           <state>S140</state>
           <state>SOFTDEVICE_PRESENT</state>
           <state>SVC_INTERFACE_CALL_AS_NORMAL_FUNCTION</state>
