@@ -136,8 +136,14 @@ static uint32_t advertising_init(uint8_t adv_flags)
 {
     uint32_t err_code;
     uint16_t len_advdata                = APP_ADV_DATA_HEADER_SIZE;
+#if (NRF_SD_BLE_API_VERSION == 6)
+    uint16_t actual_device_name_length  = BLE_GAP_ADV_SR_MAX_LEN_DEFAULT - APP_ADV_DATA_HEADER_SIZE;
+    uint8_t p_encoded_advdata[BLE_GAP_ADV_SR_MAX_LEN_DEFAULT];
+    ble_data_t adv;
+#else
     uint16_t actual_device_name_length  = BLE_GAP_ADV_MAX_SIZE - APP_ADV_DATA_HEADER_SIZE;
     uint8_t p_encoded_advdata[BLE_GAP_ADV_MAX_SIZE];
+#endif
 
     // Encode flags.
     p_encoded_advdata[0] = 0x2;
@@ -162,7 +168,13 @@ static uint32_t advertising_init(uint8_t adv_flags)
     p_encoded_advdata[8] = BLE_GAP_AD_TYPE_COMPLETE_LOCAL_NAME;
     len_advdata += actual_device_name_length;
 
+#if (NRF_SD_BLE_API_VERSION == 6)
+    adv.p_data = p_encoded_advdata;
+    adv.len    = len_advdata;
+    return sd_ble_gap_adv_data_set(BLE_GAP_ADV_SET_HANDLE_DEFAULT, &adv, NULL);
+#else
     return sd_ble_gap_adv_data_set(p_encoded_advdata, len_advdata, NULL, 0);
+#endif
 }
 
 
@@ -171,6 +183,9 @@ static uint32_t advertising_init(uint8_t adv_flags)
 static uint32_t advertising_start(void)
 {
     uint32_t err_code;
+#if (NRF_SD_BLE_API_VERSION == 6)
+    ble_gap_adv_params_t adv_params;
+#else
     ble_gap_adv_params_t adv_params =
     {
         .type        = BLE_GAP_ADV_TYPE_ADV_IND,
@@ -179,7 +194,20 @@ static uint32_t advertising_start(void)
         .interval    = APP_ADV_INTERVAL,
         .timeout     = APP_ADV_TIMEOUT_IN_SECONDS,
     };
+#endif
     uint8_t  adv_flag = BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE;
+
+#if (NRF_SD_BLE_API_VERSION == 6)
+    memset (&adv_params, 0, sizeof(ble_gap_adv_params_t));
+    adv_params.p_peer_addr   = NULL;
+    adv_params.properties.connectable = 1;
+    adv_params.properties.scannable   = 1;   
+    adv_params.properties.legacy_pdu  = 1;  // Use legacy advertising
+    adv_params.interval               = APP_ADV_INTERVAL;
+    adv_params.duration               = APP_ADV_TIMEOUT_IN_SECONDS * 100;
+    adv_params.fp                     = BLE_GAP_ADV_FP_ANY;
+    adv_params.primary_phy            = BLE_GAP_PHY_1MBPS;
+#endif
 
 #if defined(NRF_DFU_BLE_REQUIRES_BONDS) && (NRF_DFU_BLE_REQUIRES_BONDS == 1)
     ble_gap_irk_t empty_irk = {{0}};
@@ -216,8 +244,13 @@ static uint32_t advertising_start(void)
     err_code = advertising_init(adv_flag);
     VERIFY_SUCCESS(err_code);
 
+#if (NRF_SD_BLE_API_VERSION == 6)
+    (void) sd_ble_gap_adv_stop(BLE_GAP_ADV_SET_HANDLE_DEFAULT);
+    err_code = sd_ble_gap_adv_start(BLE_GAP_ADV_SET_HANDLE_DEFAULT, &adv_params, APP_BLE_CONN_CFG_TAG);
+#else
     (void) sd_ble_gap_adv_stop();
     err_code = sd_ble_gap_adv_start(&adv_params, APP_BLE_CONN_CFG_TAG);
+#endif
     VERIFY_SUCCESS(err_code);
 
     nrf_gpio_pin_clear(ADVERTISING_LED_PIN_NO);
@@ -231,7 +264,11 @@ static uint32_t advertising_start(void)
  */
 static void advertising_stop(void)
 {
+#if (NRF_SD_BLE_API_VERSION == 6)
+    (void)sd_ble_gap_adv_stop(BLE_GAP_ADV_SET_HANDLE_DEFAULT);
+#else
     (void)sd_ble_gap_adv_stop();
+#endif
     nrf_gpio_pin_set(ADVERTISING_LED_PIN_NO);
 
 }
