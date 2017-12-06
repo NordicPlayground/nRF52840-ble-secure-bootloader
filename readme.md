@@ -55,7 +55,7 @@ $ objcopy -I binary -O ihex --change-address=0xFF000 bootloader_settings.bin boo
 $ rm bootloader_settings.bin
 ```
 
-where app.hex is the application HEX file, and bootloader\_settings.bin is the generated settings file.
+where app.hex is the application HEX file, and bootloader\_settings.hex is the generated settings file.
 
 ### Running as a system
 The followings commands will program softdevice, bootloader, bootloader settings and application to nRF52840.
@@ -75,7 +75,7 @@ You can follow the instructions in [Nordic Infocenter](http://infocenter.nordics
 As example of command is:
 
 ```sh
-$ nrfutil pkg generate --hw-version 52 --application-version 0x02 --application app_new.hex --sd-id 0xFFFE --key-file priv_key.pem dfu_package.zip
+$ nrfutil pkg generate --hw-version 52 --application-version 0x02 --application app_new.hex --sd-req 0xFFFE --key-file priv_key.pem dfu_package.zip
 ```
 
 Note: application version must be larger than the current one. Before, 0x01. After 0x02.
