@@ -71,7 +71,7 @@ SRC_FILES += \
   $(SDK_ROOT)/external/segger_rtt/SEGGER_RTT.c \
   $(SDK_ROOT)/external/segger_rtt/SEGGER_RTT_Syscalls_GCC.c \
   $(SDK_ROOT)/external/segger_rtt/SEGGER_RTT_printf.c \
-  $(SDK_ROOT)/components/libraries/bootloader/ble_dfu/nrf_ble_dfu.c \
+  $(PROJ_DIR)/../SDK.mod/components/libraries/bootloader/ble_dfu/nrf_ble_dfu.c \
   $(SDK_ROOT)/external/nano-pb/pb_common.c \
   $(SDK_ROOT)/external/nano-pb/pb_decode.c \
   $(SDK_ROOT)/components/ble/common/ble_srv_common.c \
@@ -125,7 +125,7 @@ INC_FOLDERS += \
   $(SDK_ROOT)/external/micro-ecc/micro-ecc \
   $(PROJ_DIR) \
   $(SDK_ROOT)/components/libraries/crypto/backend/nrf_crypto_sw \
-  $(SDK_ROOT)/components/libraries/bootloader/ble_dfu \
+  $(PROJ_DIR)/../SDK.mod/components/libraries/bootloader/ble_dfu \
   $(SDK_ROOT)/components/softdevice/common \
   $(SDK_ROOT)/external/nano-pb \
   $(SDK_ROOT)/components/drivers_nrf/common \

@@ -34,7 +34,7 @@ SRC_FILES += \
   $(SDK_ROOT)/components/drivers_nrf/common/nrf_drv_common.c \
   $(SDK_ROOT)/components/drivers_nrf/rng/nrf_drv_rng.c \
   $(SDK_ROOT)/components/drivers_nrf/hal/nrf_nvmc.c \
-  $(SDK_ROOT)/components/libraries/bootloader/ble_dfu/nrf_ble_dfu.c \
+  $(PROJ_DIR)/../SDK.mod/components/libraries/bootloader/ble_dfu/nrf_ble_dfu.c \
   $(SDK_ROOT)/components/libraries/crypto/nrf_crypto_ecdh.c \
   $(SDK_ROOT)/components/libraries/crypto/nrf_crypto_ecdsa.c \
   $(SDK_ROOT)/components/libraries/crypto/nrf_crypto_hash.c \
@@ -111,7 +111,7 @@ INC_FOLDERS += \
   $(SDK_ROOT)/external/micro-ecc/micro-ecc \
   $(PROJ_DIR) \
   $(SDK_ROOT)/components/libraries/crypto/backend/nrf_crypto_sw \
-  $(SDK_ROOT)/components/libraries/bootloader/ble_dfu \
+  $(PROJ_DIR)/../SDK.mod/components/libraries/bootloader/ble_dfu \
   $(SDK_ROOT)/components/softdevice/common \
   $(SDK_ROOT)/external/nano-pb \
   $(SDK_ROOT)/components/drivers_nrf/common \

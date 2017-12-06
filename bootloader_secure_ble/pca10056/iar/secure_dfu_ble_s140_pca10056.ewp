@@ -330,7 +330,7 @@
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\atomic_fifo</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\balloc</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\ble_dfu</state>
+          <state>$PROJ_DIR$\..\..\..\SDK.mod\components\libraries\bootloader\ble_dfu</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\crc32</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto</state>
@@ -639,7 +639,7 @@
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\atomic_fifo</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\balloc</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\ble_dfu</state>
+          <state>$PROJ_DIR$\..\..\..\SDK.mod\components\libraries\bootloader\ble_dfu</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\dfu</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\crc32</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto</state>
@@ -1082,7 +1082,7 @@
     <name>$PROJ_DIR$\..\..\..\..\..\components\drivers_nrf\rng\nrf_drv_rng.c</name>    </file>    <file>
     <name>$PROJ_DIR$\..\..\..\..\..\components\drivers_nrf\hal\nrf_nvmc.c</name>    </file>  </group>  <group>
   <name>nRF_BLE_DFU</name>    <file>
-    <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\bootloader\ble_dfu\nrf_ble_dfu.c</name>    </file>  </group>  <group>
+    <name>$PROJ_DIR$\..\..\..\SDK.mod\components\libraries\bootloader\ble_dfu\nrf_ble_dfu.c</name>    </file>  </group>  <group>
   <name>nRF_Crypto</name>    <file>
     <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecdh.c</name>    </file>    <file>
     <name>$PROJ_DIR$\..\..\..\..\..\components\libraries\crypto\nrf_crypto_ecdsa.c</name>    </file>    <file>
