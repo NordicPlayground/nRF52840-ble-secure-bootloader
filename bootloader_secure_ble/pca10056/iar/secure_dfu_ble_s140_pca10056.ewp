@@ -351,8 +351,8 @@
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\timer</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\util</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s140\headers</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s140\headers\nrf52</state>
+          <state>$PROJ_DIR$\..\..\..\s140_nrf52840_6.0.0-6.alpha_API\include</state>
+          <state>$PROJ_DIR$\..\..\..\s140_nrf52840_6.0.0-6.alpha_API\include\nrf52</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\toolchain</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\toolchain\cmsis\include</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\toolchain\cmsis\include</state>
@@ -660,8 +660,8 @@
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\timer</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\libraries\util</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s140\headers</state>
-          <state>$PROJ_DIR$\..\..\..\..\..\components\softdevice\s140\headers\nrf52</state>
+          <state>$PROJ_DIR$\..\..\..\s140_nrf52840_6.0.0-6.alpha_API\include</state>
+          <state>$PROJ_DIR$\..\..\..\s140_nrf52840_6.0.0-6.alpha_API\include\nrf52</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\toolchain</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\toolchain\cmsis\include</state>
           <state>$PROJ_DIR$\..\..\..\..\..\components\toolchain\cmsis\include</state>

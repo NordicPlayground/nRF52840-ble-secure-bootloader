@@ -109,11 +109,11 @@ INC_FOLDERS += \
   $(SDK_ROOT)/components/libraries/scheduler \
   $(SDK_ROOT)/components/libraries/strerror \
   $(PROJ_DIR)/../dfu_req_handling \
-  $(SDK_ROOT)/components/softdevice/s140/headers/nrf52 \
+  $(PROJ_DIR)/../s140_nrf52840_6.0.0-6.alpha_API/include/nrf52 \
   $(SDK_ROOT)/components/libraries/hci \
   $(SDK_ROOT)/components/boards \
   $(SDK_ROOT)/components/libraries/bootloader \
-  $(SDK_ROOT)/components/softdevice/s140/headers \
+  $(PROJ_DIR)/../s140_nrf52840_6.0.0-6.alpha_API/include \
   $(SDK_ROOT)/components/libraries/crypto \
   $(SDK_ROOT)/components/toolchain \
   $(SDK_ROOT)/external/segger_rtt \
