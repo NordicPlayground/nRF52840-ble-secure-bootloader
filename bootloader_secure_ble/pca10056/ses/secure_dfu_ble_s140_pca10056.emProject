@@ -116,7 +116,7 @@
       <file file_name="../../../../../external/micro-ecc/nrf52hf_armgcc/armgcc/micro_ecc_lib_nrf52.a" />
     </folder>
     <folder Name="nRF_SoftDevice">
-      <file file_name="../../../../../components/softdevice/common/nrf_sdh.c" />
+      <file file_name="../../../SDK.mod/components/softdevice/common/nrf_sdh.c" />
       <file file_name="../../../../../components/softdevice/common/nrf_sdh_ble.c" />
       <file file_name="../../../../../components/softdevice/common/nrf_sdh_soc.c" />
     </folder>

@@ -63,7 +63,7 @@ SRC_FILES += \
   $(SDK_ROOT)/external/nano-pb/pb_decode.c \
   $(SDK_ROOT)/components/toolchain/gcc/gcc_startup_nrf52840.S \
   $(SDK_ROOT)/components/toolchain/system_nrf52840.c \
-  $(SDK_ROOT)/components/softdevice/common/nrf_sdh.c \
+  $(PROJ_DIR)/../SDK.mod/components/softdevice/common/nrf_sdh.c \
   $(SDK_ROOT)/components/softdevice/common/nrf_sdh_ble.c \
   $(SDK_ROOT)/components/softdevice/common/nrf_sdh_soc.c \
   $(SDK_ROOT)/components/libraries/crypto/backend/micro_ecc/micro_ecc_lib_ecdh.c \

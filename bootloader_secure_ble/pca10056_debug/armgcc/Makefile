@@ -75,7 +75,7 @@ SRC_FILES += \
   $(SDK_ROOT)/external/nano-pb/pb_common.c \
   $(SDK_ROOT)/external/nano-pb/pb_decode.c \
   $(SDK_ROOT)/components/ble/common/ble_srv_common.c \
-  $(SDK_ROOT)/components/softdevice/common/nrf_sdh.c \
+  $(PROJ_DIR)/../SDK.mod/components/softdevice/common/nrf_sdh.c \
   $(SDK_ROOT)/components/softdevice/common/nrf_sdh_ble.c \
   $(SDK_ROOT)/components/softdevice/common/nrf_sdh_soc.c \
   $(SDK_ROOT)/components/libraries/crypto/backend/micro_ecc/micro_ecc_lib_ecdh.c \

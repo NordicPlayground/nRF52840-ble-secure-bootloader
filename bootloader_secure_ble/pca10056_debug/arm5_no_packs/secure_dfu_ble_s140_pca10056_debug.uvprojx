@@ -654,7 +654,7 @@
           <Files>            <File>
               <FileName>nrf_sdh.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\components\softdevice\common\nrf_sdh.c</FilePath>            </File>            <File>
+              <FilePath>..\..\..\SDK.mod\components\softdevice\common\nrf_sdh.c</FilePath>            </File>            <File>
               <FileName>nrf_sdh_ble.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\components\softdevice\common\nrf_sdh_ble.c</FilePath>            </File>            <File>

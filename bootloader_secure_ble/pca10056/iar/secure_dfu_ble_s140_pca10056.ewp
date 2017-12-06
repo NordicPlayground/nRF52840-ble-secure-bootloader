@@ -1122,7 +1122,7 @@
   <name>nRF_micro-ecc</name>    <file>
     <name>$PROJ_DIR$\..\..\..\..\..\external\micro-ecc\nrf52hf_iar\armgcc\micro_ecc_lib_nrf52.a</name>    </file>  </group>  <group>
   <name>nRF_SoftDevice</name>    <file>
-    <name>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh.c</name>    </file>    <file>
+    <name>$PROJ_DIR$\..\..\..\SDK.mod\components\softdevice\common\nrf_sdh.c</name>    </file>    <file>
     <name>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh_ble.c</name>    </file>    <file>
     <name>$PROJ_DIR$\..\..\..\..\..\components\softdevice\common\nrf_sdh_soc.c</name>    </file>  </group>  <group>
   <name>nRF_Crypto backends</name>    <file>
