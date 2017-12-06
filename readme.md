@@ -28,8 +28,6 @@ In the example directory of SDK 14.2.0, clone the repository.
 
 ```sh
 $ git clone https://github.com/pkchan/SDK14.2.0_s140_nrf52840_6.0.0-6.alpha_bootloader_secure_ble.git
-$ nrfutil keys generate priv_key.pem
-$ nrfutil keys display --key pk --format code priv_key.pem > dfu_req_handling/dfu_public_key.c
 ```
 
 In the project directory, generate signing key.
