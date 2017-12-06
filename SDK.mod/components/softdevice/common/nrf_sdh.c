@@ -219,7 +219,7 @@ ret_code_t nrf_sdh_enable_request(void)
         .source        = NRF_SDH_CLOCK_LF_SRC,
         .rc_ctiv       = NRF_SDH_CLOCK_LF_RC_CTIV,
         .rc_temp_ctiv  = NRF_SDH_CLOCK_LF_RC_TEMP_CTIV,
-    #ifdef S140
+    #if defined(S140) && (NRF_SD_BLE_API_VERSION < 6)
         .xtal_accuracy = NRF_SDH_CLOCK_LF_XTAL_ACCURACY
     #else
         .accuracy      = NRF_SDH_CLOCK_LF_XTAL_ACCURACY
