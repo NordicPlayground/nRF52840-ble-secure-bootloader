@@ -2,10 +2,11 @@
 
 This example is based on the bootloader example bootloader\_secure\_ble of Nordic nRF5 SDK 14.2.0, which is ported to softdevice s140\_nrf52840\_6.0.0-6.alpha. Functionalities are identical to the original bootloader example from SDK 14.2.0.
 
-### Features
-
-  - Support both nRF52832 and nRF52840
-  - Support SES, Keil5, GCC and IAR compilers
+Requirements
+------------
+- [nRF5 SDK version 14.2.0](http://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v14.x.x/nRF5_SDK_14.2.0_17b948a.zip)
+- [nRF52840-PDK](https://www.nordicsemi.com/eng/Products/nRF52840-Preview-DK) development kit
+- Segger Embedded Studio, Keil uVision, GCC of IAR.
 
 You can also:
   - Add bonded link support by adding NRF\_DFU\_BLE\_REQUIRES\_BONDS=1 to compiler options. (Note: In ble\_app\_buttonless\_dfu, you need to change NRF\_DFU\_BLE\_BUTTONLESS\_SUPPORTS\_BONDS=1 in sdk\_config.h.)
@@ -139,6 +140,3 @@ are permitted provided that the following conditions are met:
  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
  OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
-
